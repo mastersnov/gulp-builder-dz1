@@ -27,11 +27,11 @@ $.gulp.task('default', $.gulp.series(
     'pug',
     'js:foundation',
     'js:process',
-    'copy:image',
     'copy:fonts',
     'css:foundation',
     'sprite:svg',
-    'sprite:png'
+    'sprite:png',
+    'copy:image'
   ),
   $.gulp.parallel(
     'watch',
