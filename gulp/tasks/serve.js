@@ -2,10 +2,7 @@
 
 module.exports = function() {
   $.gulp.task('serve', function() {
-    $.browserSync.init({
-      open: false,
-      server: $.config.root
-    });
+    $.browserSync.init($.config.browserSyncConfig);
 
     $.browserSync.watch([$.config.root + '/**/*.*', '!**/*.css'], $.browserSync.reload);
   });
